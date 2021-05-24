@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Distance between 2 points" max_length="40" name="x_598934_find_hosp_distance_between_2_points" sizeclass="0" type="collection">
+        <element label="Distance" max_length="40" name="distance" type="float"/>
+        <element label="Zip1" max_length="40" name="zip1" type="string"/>
+        <element label="Zip2" max_length="40" name="zip2" type="string"/>
+    </element>
+</database>
