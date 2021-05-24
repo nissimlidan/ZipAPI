@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>checks_distance</internal_name>
+        <label_cache>[{"name":"{{action.zip1}}","label":"action➛zip1","type":"action","ref":""},{"name":"{{action.zip2}}","label":"action➛zip2","type":"action","ref":""},{"name":"{{action.key}}","label":"action➛key","type":"action","ref":""},{"name":"{{step[b00b0a07-6d21-4a6b-b195-7d14204c41c0].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[b00b0a07-6d21-4a6b-b195-7d14204c41c0].response_headers}}","label":"step➛REST step➛Response Headers","type":"step","ref":""},{"name":"{{step[b00b0a07-6d21-4a6b-b195-7d14204c41c0].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Checks distance</name>
+        <natlang/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:07:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a4c21a982f50701076aed8492799b658</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Checks distance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_a4c21a982f50701076aed8492799b658</sys_update_name>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=a4c21a982f50701076aed8492799b658"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a4c21a982f50701076aed8492799b658"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=a4c21a982f50701076aed8492799b658^sys_idNOT IN17789edc2f50701076aed8492799b666,fd84925c2f50701076aed8492799b64d"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Checks distance">a4c21a982f50701076aed8492799b658</action>
+        <cid>f43e5376-a16a-4e9e-a5d3-25be3bd8fa66</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:32:19</sys_created_on>
+        <sys_id>17789edc2f50701076aed8492799b666</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=17789edc2f50701076aed8492799b666"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>17789edc2f50701076aed8492799b666</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:32:19</sys_created_on>
+        <sys_id>d3789edc2f50701076aed8492799b67a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+// ... code ...
+  if(inputs.status == "200"){
+  
+  	var resp = inputs.response;
+    var parsed = JSON.parse(resp);
+    var dist = parsed["data"];
+    dist.forEach(zipcodes);
+  }
+})(inputs, outputs);
+
+function(zip1,zip2){
+	
+    var parsedItem = JSON.parse(JSON.stringify(zip1,zip2));
+    var avail = new GlideRecord('x_598934_find_hosp_distance_between_2_points');
+    avail.addQuery('dist', parsedItem.Distance);
+  	avail.query();
+  	
+  	if(avail.hasNext()){
+      avail.next();
+      avail.distance = parsedItem.distance;
+      avail.zip1 = parsedItem.zip1;
+      avail.zip2 = parsedItem.zip2;
+      avail.update();
+      
+    } else {
+      avail.initialize();
+      avail.distance = parsedItem.distance;
+      avail.zip1 = parsedItem.zip1;
+      avail.zip2 = parsedItem.zip2;
+      avail.insert();
+    
+    }
+
+}
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=17789edc2f50701076aed8492799b666"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>response</field>
+        <id>17789edc2f50701076aed8492799b666</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:32:19</sys_created_on>
+        <sys_id>13789edc2f50701076aed8492799b67b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_17789edc2f50701076aed8492799b666</table>
+        <value>{{step[b00b0a07-6d21-4a6b-b195-7d14204c41c0].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>17789edc2f50701076aed8492799b666</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:32:19</sys_created_on>
+        <sys_id>53789edc2f50701076aed8492799b67a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>status</field>
+        <id>17789edc2f50701076aed8492799b666</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:32:19</sys_created_on>
+        <sys_id>d3789edc2f50701076aed8492799b67b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_17789edc2f50701076aed8492799b666</table>
+        <value>{{step[b00b0a07-6d21-4a6b-b195-7d14204c41c0].status_code}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=17789edc2f50701076aed8492799b666^sys_idNOT INd3789edc2f50701076aed8492799b672,df789edc2f50701076aed8492799b66c"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>response</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">17789edc2f50701076aed8492799b666</model>
+        <model_id>17789edc2f50701076aed8492799b666</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_17789edc2f50701076aed8492799b666</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:32:19</sys_created_on>
+        <sys_id>d3789edc2f50701076aed8492799b672</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>status</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">17789edc2f50701076aed8492799b666</model>
+        <model_id>17789edc2f50701076aed8492799b666</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_17789edc2f50701076aed8492799b666</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:32:19</sys_created_on>
+        <sys_id>df789edc2f50701076aed8492799b66c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Checks distance">a4c21a982f50701076aed8492799b658</action>
+        <cid>b00b0a07-6d21-4a6b-b195-7d14204c41c0</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>REST step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:01</sys_created_on>
+        <sys_id>fd84925c2f50701076aed8492799b64d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:17:57</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fd84925c2f50701076aed8492799b64d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>1e84925c2f50701076aed8492799b693</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>5a84925c2f50701076aed8492799b693</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <value>https://service.zipapi.us</value>
+        <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>9684925c2f50701076aed8492799b693</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>de84925c2f50701076aed8492799b692</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="Connection">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:17:57</sys_created_on>
+        <sys_id>f0359a5c2f50701076aed8492799b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:17:57</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:17:57</sys_created_on>
+        <sys_id>f4359a5c2f50701076aed8492799b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:17:57</sys_updated_on>
+        <value>{}</value>
+        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fd84925c2f50701076aed8492799b64d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>5e84925c2f50701076aed8492799b692</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>9a84925c2f50701076aed8492799b692</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>d684925c2f50701076aed8492799b692</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>1284925c2f50701076aed8492799b692</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>headers</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:17:57</sys_created_on>
+        <sys_id>bc359a5c2f50701076aed8492799b658</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:17:57</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:17:57</sys_created_on>
+        <sys_id>70359a5c2f50701076aed8492799b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:17:57</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{"type":"ADV_NV","value":[{"name":"X-API-KEY","value":"{{action.key}}","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"zip1","value":"{{action.zip1}}","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"zip2","value":"{{action.zip2}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fd84925c2f50701076aed8492799b64d^sys_idNOT IN1e84925c2f50701076aed8492799b68e,1e84925c2f50701076aed8492799b68f"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>use_mid</input_name>
+        <instance>fd84925c2f50701076aed8492799b64d</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"use_mid":{"scriptActive":false}}</script>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:02</sys_created_on>
+        <sys_id>1e84925c2f50701076aed8492799b68e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:02</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>resource_path</input_name>
+        <instance>fd84925c2f50701076aed8492799b64d</instance>
+        <referenced_table>sys_hub_step_instance</referenced_table>
+        <script>{"resource_path":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nvar path \u003d \"/zipcode/distance?X-API-KEY\u003d\" + fd_data.action_inputs.key + \"\u0026zip1\u003d\" + fd_data.action_inputs.zip1 + \"\u0026zip2\u003d\" + fd_data.action_inputs.zip2;\nreturn path;"}}</script>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:15:03</sys_created_on>
+        <sys_id>1e84925c2f50701076aed8492799b68f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_action_input action="delete_multiple" query="model=a4c21a982f50701076aed8492799b658^sys_idNOT IN23e2121c2f50701076aed8492799b6fa,2be2121c2f50701076aed8492799b6f2,a3e2521c2f50701076aed8492799b600"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=20b21f91-08ab-4505-96e1-8f5f7a04ce32</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>zip2</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>zip2</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Checks distance">a4c21a982f50701076aed8492799b658</model>
+        <model_id>a4c21a982f50701076aed8492799b658</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_a4c21a982f50701076aed8492799b658</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:08:02</sys_created_on>
+        <sys_id>23e2121c2f50701076aed8492799b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:08:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ab3c248f-8815-42bc-ad0d-ace80aef3c68</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>zip1</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>zip1</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Checks distance">a4c21a982f50701076aed8492799b658</model>
+        <model_id>a4c21a982f50701076aed8492799b658</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_a4c21a982f50701076aed8492799b658</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:08:02</sys_created_on>
+        <sys_id>2be2121c2f50701076aed8492799b6f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:08:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0b7350f3-67a8-4b9c-984d-059479ca478e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>key</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>key</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Checks distance">a4c21a982f50701076aed8492799b658</model>
+        <model_id>a4c21a982f50701076aed8492799b658</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_a4c21a982f50701076aed8492799b658</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:08:02</sys_created_on>
+        <sys_id>a3e2521c2f50701076aed8492799b600</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:08:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_a4c21a982f50701076aed8492799b658^sys_idNOT IN6be2121c2f50701076aed8492799b6f8,6fe2521c2f50701076aed8492799b604,ebe2121c2f50701076aed8492799b6fe"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>zip1</element>
+        <help/>
+        <hint/>
+        <label>zip1</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_a4c21a982f50701076aed8492799b658</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:08:02</sys_created_on>
+        <sys_id>6be2121c2f50701076aed8492799b6f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:08:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>key</element>
+        <help/>
+        <hint/>
+        <label>key</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_a4c21a982f50701076aed8492799b658</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:08:02</sys_created_on>
+        <sys_id>6fe2521c2f50701076aed8492799b604</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:08:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>zip2</element>
+        <help/>
+        <hint/>
+        <label>zip2</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_a4c21a982f50701076aed8492799b658</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:08:02</sys_created_on>
+        <sys_id>ebe2121c2f50701076aed8492799b6fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:08:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

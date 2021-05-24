@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-18 14:41:20</sys_created_on>
+        <sys_id>a233c1442fd0301076aed8492799b6a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_598934_find_hosp_hospital.x_598934_find_hosp.hospital_user</sys_name>
+        <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_security_acl display_value="x_598934_find_hosp_hospital">e233c1442fd0301076aed8492799b6a1</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_a233c1442fd0301076aed8492799b6a4</sys_update_name>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-18 14:41:20</sys_updated_on>
+        <sys_user_role display_value="x_598934_find_hosp.hospital_user" name="x_598934_find_hosp.hospital_user">8233c1442fd0301076aed8492799b663</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

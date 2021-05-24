@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="438481442fd0301076aed8492799b629" sys_domain="global" table="x_598934_find_hosp_hospital" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 14:47:06</sys_created_on>
+            <sys_id>5b8445842fd0301076aed8492799b6d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 14:47:06</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>radius</element>
+            <position>1</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 14:47:06</sys_created_on>
+            <sys_id>538445842fd0301076aed8492799b6d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 14:47:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 14:47:06</sys_created_on>
+            <sys_id>d38445842fd0301076aed8492799b6d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 14:47:06</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>zip</element>
+            <position>3</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 14:47:06</sys_created_on>
+            <sys_id>578445842fd0301076aed8492799b6d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 14:47:06</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 14:47:06</sys_created_on>
+            <sys_id>d78445842fd0301076aed8492799b6d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 14:47:06</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <position>5</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:14</sys_created_on>
+            <sys_id>9ac749c42fd0301076aed8492799b6d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>address</element>
+            <position>6</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:14</sys_created_on>
+            <sys_id>1ec7c9082fd0301076aed8492799b621</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>country</element>
+            <position>7</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:15</sys_created_on>
+            <sys_id>d2c7c9082fd0301076aed8492799b62a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>beds</element>
+            <position>8</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:15</sys_created_on>
+            <sys_id>dac7c9082fd0301076aed8492799b632</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>longitude</element>
+            <position>9</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:15</sys_created_on>
+            <sys_id>56c7c9082fd0301076aed8492799b63b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>10</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:15</sys_created_on>
+            <sys_id>eec7c9082fd0301076aed8492799b643</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>latitude</element>
+            <position>11</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:15</sys_created_on>
+            <sys_id>aac7c9082fd0301076aed8492799b64c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:15</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>population</element>
+            <position>12</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:16</sys_created_on>
+            <sys_id>a6c7c9082fd0301076aed8492799b655</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>13</position>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 15:01:16</sys_created_on>
+            <sys_id>e2c7c9082fd0301076aed8492799b65e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_598934_find_hosp_hospital" sys_domain="global" view="Default view">438481442fd0301076aed8492799b629</sys_ui_section>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:01:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_598934_find_hosp_hospital</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 14:47:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>438481442fd0301076aed8492799b629</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_598934_find_hosp_hospital</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+            <sys_update_name>sys_ui_section_438481442fd0301076aed8492799b629</sys_update_name>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 14:47:06</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Checks distance between 2 zipcodes</description>
+        <internal_name>distance_2_points</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Distance 2 points</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:05:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8a629ad82f50701076aed8492799b6dc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Distance 2 points</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name>sys_hub_flow_8a629ad82f50701076aed8492799b6dc</sys_update_name>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 12:25:29</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8a629ad82f50701076aed8492799b6dc"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8a629ad82f50701076aed8492799b6dc"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8a629ad82f50701076aed8492799b6dc^sys_idNOT INf5eafde12f10301076aed8492799b6c5"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Distance 2 points">8a629ad82f50701076aed8492799b6dc</flow>
+        <name>Repeat</name>
+        <remote_sys_id/>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-23 10:35:28</sys_created_on>
+        <sys_id>f5eafde12f10301076aed8492799b6c5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 12:25:29</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f5eafde12f10301076aed8492799b6c5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>f5eafde12f10301076aed8492799b6c5</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-23 10:35:28</sys_created_on>
+        <sys_id>79eafde12f10301076aed8492799b6c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-23 10:35:28</sys_updated_on>
+        <value>1970-01-01 02:00:01</value>
+        <variable display_value="Repeat">1c5f4d94c32222002841b63b12d3aeb3</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8a629ad82f50701076aed8492799b6dc^sys_idNOT IN82629ad82f50701076aed8492799b6df"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8a629ad82f50701076aed8492799b6dc</id>
+        <name>Distance 2 points</name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-19 15:05:45</sys_created_on>
+        <sys_id>82629ad82f50701076aed8492799b6df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-19 15:05:45</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8a629ad82f50701076aed8492799b6dc^sys_idNOT INc3addff12f50301076aed8492799b699"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Distance between 2 points">a45782ad2f10301076aed8492799b6f2</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Distance 2 points">8a629ad82f50701076aed8492799b6dc</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 12:25:29</sys_created_on>
+        <sys_id>c3addff12f50301076aed8492799b699</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 12:25:29</sys_updated_on>
+        <ui_id>6e0a4474-5067-4866-ac3a-a889a06ccd62</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c3addff12f50301076aed8492799b699"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c3addff12f50301076aed8492799b699</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 12:25:29</sys_created_on>
+        <sys_id>0faddff12f50301076aed8492799b69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 12:25:29</sys_updated_on>
+        <value>90870</value>
+        <variable display_value="zip2">2457c2ad2f10301076aed8492799b60e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c3addff12f50301076aed8492799b699</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 12:25:29</sys_created_on>
+        <sys_id>83addff12f50301076aed8492799b69b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 12:25:29</sys_updated_on>
+        <value>js-61ac07acee44623d688b562b7b87f665</value>
+        <variable display_value="key">205782ad2f10301076aed8492799b6f5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c3addff12f50301076aed8492799b699</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 12:25:29</sys_created_on>
+        <sys_id>cfaddff12f50301076aed8492799b69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 12:25:29</sys_updated_on>
+        <value>90220</value>
+        <variable display_value="zip1">e85782ad2f10301076aed8492799b6fb</variable>
+    </sys_variable_value>
+</record_update>

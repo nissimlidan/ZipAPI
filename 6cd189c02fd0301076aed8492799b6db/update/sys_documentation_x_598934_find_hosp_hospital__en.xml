@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Hospital Available Beds" language="en" table="x_598934_find_hosp_hospital">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Hospital Available Beds</label>
+            <language>en</language>
+            <name>x_598934_find_hosp_hospital</name>
+            <plural>Hospital Available Beds</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>lidanN</sys_created_by>
+            <sys_created_on>2021-05-18 14:41:20</sys_created_on>
+            <sys_id>6633c1442fd0301076aed8492799b6bc</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Hospital Available Beds</sys_name>
+            <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+            <sys_update_name>sys_documentation_x_598934_find_hosp_hospital__en</sys_update_name>
+            <sys_updated_by>lidanN</sys_updated_by>
+            <sys_updated_on>2021-05-18 15:03:20</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

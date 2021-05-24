@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Hospital Available Beds" max_length="40" name="x_598934_find_hosp_hospital" sizeclass="161" type="collection">
+        <element label="Address" max_length="40" name="address" type="string"/>
+        <element label="Beds" max_length="40" name="beds" type="string"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Country" max_length="40" name="country" type="string"/>
+        <element label="Latitude" max_length="40" name="latitude" type="float"/>
+        <element label="Longitude" max_length="40" name="longitude" type="float"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Population" max_length="40" name="population" type="integer"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <element label="Zip" max_length="40" name="zip" type="string"/>
+    </element>
+</database>
