@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Find zipcode by city or state</description>
+        <internal_name>find_zipcode</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Find zipcode</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 15:46:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>77bbc8ce2f90301076aed8492799b619</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Find zipcode</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name>sys_hub_flow_77bbc8ce2f90301076aed8492799b619</sys_update_name>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 16:56:30</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=77bbc8ce2f90301076aed8492799b619"/>
+    <sys_variable_value action="delete_multiple" query="document_key=77bbc8ce2f90301076aed8492799b619"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=77bbc8ce2f90301076aed8492799b619^sys_idNOT IN24ebc84e2f90301076aed8492799b6a0"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Find zipcode">77bbc8ce2f90301076aed8492799b619</flow>
+        <name>Repeat</name>
+        <remote_sys_id/>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 15:47:22</sys_created_on>
+        <sys_id>24ebc84e2f90301076aed8492799b6a0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 16:56:30</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=24ebc84e2f90301076aed8492799b6a0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>24ebc84e2f90301076aed8492799b6a0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 15:47:22</sys_created_on>
+        <sys_id>6ceb0cc22fd0301076aed8492799b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 15:47:22</sys_updated_on>
+        <value>1970-01-01 02:00:01</value>
+        <variable display_value="Repeat">1c5f4d94c32222002841b63b12d3aeb3</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=77bbc8ce2f90301076aed8492799b619^sys_idNOT INf7bb88c22fd0301076aed8492799b66a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>77bbc8ce2f90301076aed8492799b619</id>
+        <name>Find zipcode</name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 15:46:46</sys_created_on>
+        <sys_id>f7bb88c22fd0301076aed8492799b66a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 15:46:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=77bbc8ce2f90301076aed8492799b619^sys_idNOT INd9bb98022f14301076aed8492799b67b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="find zip code">6364108a2fd0301076aed8492799b6f9</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Find zipcode">77bbc8ce2f90301076aed8492799b619</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 16:56:30</sys_created_on>
+        <sys_id>d9bb98022f14301076aed8492799b67b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 16:56:30</sys_updated_on>
+        <ui_id>6ade0bb8-a8b3-48b2-93b9-650e184b5704</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d9bb98022f14301076aed8492799b67b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d9bb98022f14301076aed8492799b67b</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 16:56:30</sys_created_on>
+        <sys_id>15bb98022f14301076aed8492799b67d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 16:56:30</sys_updated_on>
+        <value>Beverly Hills</value>
+        <variable display_value="city">eb64508a2fd0301076aed8492799b602</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d9bb98022f14301076aed8492799b67b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 16:56:30</sys_created_on>
+        <sys_id>99bb98022f14301076aed8492799b67d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 16:56:30</sys_updated_on>
+        <value>js-61ac07acee44623d688b562b7b87f665</value>
+        <variable display_value="key">2f64108a2fd0301076aed8492799b6fb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d9bb98022f14301076aed8492799b67b</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-24 16:56:30</sys_created_on>
+        <sys_id>d5bb98022f14301076aed8492799b67d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-24 16:56:30</sys_updated_on>
+        <value>CA</value>
+        <variable display_value="state">2b64508a2fd0301076aed8492799b615</variable>
+    </sys_variable_value>
+</record_update>

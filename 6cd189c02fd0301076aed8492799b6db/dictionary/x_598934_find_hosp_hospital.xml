@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Hospital Available Beds" max_length="40" name="x_598934_find_hosp_hospital" sizeclass="161" type="collection">
+    <element label="Hospital Available Beds" max_length="40" name="x_598934_find_hosp_hospital" sizeclass="162" type="collection">
         <element label="Address" max_length="40" name="address" type="string"/>
         <element label="Beds" max_length="40" name="beds" type="string"/>
         <element label="City" max_length="40" name="city" type="string"/>

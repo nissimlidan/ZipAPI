@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="ZIP by city or state" max_length="40" name="x_598934_find_hosp_zip_codes_by_city_or_state" sizeclass="37" type="collection">
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element display="true" label="State" max_length="40" name="state" type="string"/>
+        <element label="ZIP" max_length="40" name="zip" type="string"/>
+    </element>
+</database>

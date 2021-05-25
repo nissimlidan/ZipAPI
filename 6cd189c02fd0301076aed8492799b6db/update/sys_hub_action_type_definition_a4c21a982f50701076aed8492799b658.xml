@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a4c21a982f50701076aed8492799b658</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Checks distance</sys_name>
         <sys_overrides/>
         <sys_package display_value="Find Hospital" source="x_598934_find_hosp">6cd189c02fd0301076aed8492799b6db</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a4c21a982f50701076aed8492799b658</sys_update_name>
         <sys_updated_by>lidanN</sys_updated_by>
-        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -56,12 +56,26 @@
         <sys_created_by>lidanN</sys_created_by>
         <sys_created_on>2021-05-19 15:32:19</sys_created_on>
         <sys_id>17789edc2f50701076aed8492799b666</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
         <sys_updated_by>lidanN</sys_updated_by>
-        <sys_updated_on>2021-05-19 15:32:19</sys_updated_on>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=17789edc2f50701076aed8492799b666"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>17789edc2f50701076aed8492799b666</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-25 12:24:32</sys_created_on>
+        <sys_id>0b0720922f90301076aed8492799b636</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>17789edc2f50701076aed8492799b666</document_key>
@@ -112,6 +126,18 @@ function(zip1,zip2){
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=17789edc2f50701076aed8492799b666"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>17789edc2f50701076aed8492799b666</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-25 12:24:32</sys_created_on>
+        <sys_id>870720922f90301076aed8492799b636</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>response</field>
         <id>17789edc2f50701076aed8492799b666</id>
@@ -327,10 +353,10 @@ function(zip1,zip2){
         <sys_created_by>lidanN</sys_created_by>
         <sys_created_on>2021-05-19 15:15:01</sys_created_on>
         <sys_id>fd84925c2f50701076aed8492799b64d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
         <sys_updated_by>lidanN</sys_updated_by>
-        <sys_updated_on>2021-05-19 15:17:57</sys_updated_on>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=fd84925c2f50701076aed8492799b64d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -346,6 +372,34 @@ function(zip1,zip2){
         <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
         <value>35aa573fd7802200bdbaee5b5e610375</value>
         <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-25 12:24:32</sys_created_on>
+        <sys_id>320720922f90301076aed8492799b626</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
+        <value>b7d26c9e2f50301076aed8492799b649</value>
+        <variable display_value="Connection Alias">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fd84925c2f50701076aed8492799b64d</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-25 12:24:32</sys_created_on>
+        <sys_id>3a0720922f90301076aed8492799b625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
+        <value>ef751ff07301330025d71afe2ff6a7f9</value>
+        <variable display_value="Retry Policy">37be397587c03300a8cc7d5e27cb0ba2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -383,10 +437,10 @@ function(zip1,zip2){
         <sys_created_by>lidanN</sys_created_by>
         <sys_created_on>2021-05-19 15:15:03</sys_created_on>
         <sys_id>de84925c2f50701076aed8492799b692</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>lidanN</sys_updated_by>
-        <sys_updated_on>2021-05-19 15:15:03</sys_updated_on>
-        <value>define_connection_inline</value>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
+        <value>use_connection_alias</value>
         <variable display_value="Connection">91e207d03b50030057a4a2e334efc4a0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -467,6 +521,18 @@ function(zip1,zip2){
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection_alias</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-25 12:24:32</sys_created_on>
+        <sys_id>360720922f90301076aed8492799b625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>headers</field>
         <id>fd84925c2f50701076aed8492799b64d</id>
         <sys_created_by>lidanN</sys_created_by>
@@ -490,6 +556,100 @@ function(zip1,zip2){
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{"type":"ADV_NV","value":[{"name":"X-API-KEY","value":"{{action.key}}","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"zip1","value":"{{action.zip1}}","attributes":{"omit_if_empty":false,"mandatory":false}},{"name":"zip2","value":"{{action.zip2}}","attributes":{"omit_if_empty":false,"mandatory":false}}]}</value>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>retry_policy</field>
+        <id>fd84925c2f50701076aed8492799b64d</id>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-25 12:24:32</sys_created_on>
+        <sys_id>7e0720922f90301076aed8492799b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-25 12:24:32</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=fd84925c2f50701076aed8492799b64d^sys_idNOT INb60720922f90301076aed8492799b615"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="REST step">fd84925c2f50701076aed8492799b64d</model>
+        <model_id>fd84925c2f50701076aed8492799b64d</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_fd84925c2f50701076aed8492799b64d</name>
+        <next_element/>
+        <order>7</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>lidanN</sys_created_by>
+        <sys_created_on>2021-05-25 12:24:31</sys_created_on>
+        <sys_id>b60720922f90301076aed8492799b615</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Find Hospital">6cd189c02fd0301076aed8492799b6db</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>lidanN</sys_updated_by>
+        <sys_updated_on>2021-05-25 12:24:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=fd84925c2f50701076aed8492799b64d^sys_idNOT IN1e84925c2f50701076aed8492799b68e,1e84925c2f50701076aed8492799b68f"/>
     <sys_hub_input_scripts action="INSERT_OR_UPDATE">
         <active>false</active>
